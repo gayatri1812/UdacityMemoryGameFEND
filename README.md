@@ -3,11 +3,9 @@
 
 - Your goal is to Match your favourite Emojis in less time and least number of moves.
 
-<img src="img/Memory.png" width="350" height="500"></img>
-
 Instructions: 
 
-- Click on any ard.
+- Click on any card.
 - Keep revealing cards and working your memory to remember each card you opened.
 - Match cards properly with less moves and in lesser time. Remember, you get more star ratings if you finish in less moves and less time.
 
