@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Memory Game</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/regular.css" integrity="sha384-avJt9MoJH2rB4PKRsJRHZv7yiFZn8LrnXuzvmZoD3fh1aL6aM6s0BBcnCvBe6XSD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Memorize the Emoticons <i class="far fa-smile-beam fa-x"></i></h1>
+        </header>
+
+        <section class="score-panel">
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="clicks">0</span> Click(s)
+
+            <div class="timer">
+            </div>
+
+            <div class="restart" onclick=startGame()>
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <ul class="deck" id="card-deck">
+            <li class="card" type="grin-beam">
+                <i class="far fa-grin-beam fa-2x"></i>
+            </li>
+            <li class="card" type="grin-squint-tears">
+                <i class="far fa-grin-squint-tears fa-2x"></i>
+            </li>
+            <li class="card match" type="grin-hearts">
+                <i class="fas fa-grin-hearts fa-2x"></i>
+            </li>
+            <li class="card" type="tongue-wink" >
+                <i class="far fa-grin-tongue-wink fa-2x"></i>
+            </li>
+            <li class="card" type="kiss-heart">
+                <i class="far fa-kiss-wink-heart fa-2x"></i>
+            </li>
+            <li class="card match" type="smile-wink">
+                <i class="far fa-smile-wink fa-2x"></i>
+            </li>
+            <li class="card" type="sad-cry">
+                <i class="far fa-sad-cry fa-2x"></i>
+            </li>
+            <li class="card" type="rolling-eyes">
+                <i class="far fa-meh-rolling-eyes fa-2x"></i>
+            </li>
+            <li class="card" type="grin-beam">
+                <i class="far fa-grin-beam fa-2x"></i>
+            </li>
+            <li class="card" type="grin-squint-tears">
+                <i class="far fa-grin-squint-tears fa-2x"></i>
+            </li>
+            <li class="card match" type="grin-hearts">
+                <i class="fas fa-grin-hearts fa-2x"></i>
+            </li>
+            <li class="card" type="tongue-wink" >
+                <i class="far fa-grin-tongue-wink fa-2x"></i>
+            </li>
+            <li class="card" type="kiss-heart">
+                <i class="far fa-kiss-wink-heart fa-2x"></i>
+            </li>
+            <li class="card match" type="smile-wink">
+                <i class="far fa-smile-wink fa-2x"></i>
+            </li>
+            <li class="card" type="sad-cry">
+                <i class="far fa-sad-cry fa-2x"></i>
+            </li>
+            <li class="card" type="rolling-eyes">
+                <i class="far fa-meh-rolling-eyes fa-2x"></i>
+            </li>
+        </ul>
+
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                
+                <a class="close" href=# >Close</a>
+                <div class="content-1">
+                    Congratulations, You won !!
+                </div>
+                <div class="content-2">
+                    <p> with <span id=finalMove> </span> clicks </p>
+                    <p>in  <span id=totalTime> </span> </p>
+                    <p>Rating:  <span id=starRating></span></p>
+                </div>
+                <button id="play-again"onclick="playAgain()">
+                    Play again? </a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
